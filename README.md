@@ -4,7 +4,7 @@ Sample LWC component to show looking up VIN details from NHTSA REST service
 THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/thedges/Disclaimer/master/disclaimer.txt).
 
 ## Component Details
-This is simple Lightning Web Component just to show sample of calling an external REST service and showing the results within Salesforce. For demo purposes, this component calls the open NHTSA REST service that provides free (VIN decode service)[https://vpic.nhtsa.dot.gov/api/] for looking up car details. Below is sample of the component that shows auto-loading the VIN details since the record being loaded includes the VIN # in a specified field (the field name can be configured in the component configuration).
+This is simple Lightning Web Component just to show sample of calling an external REST service and showing the results within Salesforce. For demo purposes, this component calls the open NHTSA REST service that provides free [VIN decode service](https://vpic.nhtsa.dot.gov/api/) for looking up car details. Below is sample of the component that shows auto-loading the VIN details since the record being loaded includes the VIN # in a specified field (the field name can be configured in the component configuration).
 
 ![alt text](https://github.com/thedges/VINLookup/blob/master/VINLookup.gif "Sample Image")
 
