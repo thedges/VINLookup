@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-card">
+        <template if:true={showSpinner}>
+            <div class="spinner">
+                <lightning-spinner variant="brand" alternative-text="Retrieving VIN details..."></lightning-spinner>
+            </div>
+        </template>
+
+        <div class="row">
+            <lightning-input class="slds-p-around_x-small" type="text" label="Enter VIN #:" value={vin} onblur={handleChange}>
+            </lightning-input>
+        </div>
+        <div class="row slds-align_absolute-center">
+            <lightning-button class="slds-p-around_x-small" variant="brand" label='Get Details' onclick={getData}>
+            </lightning-button>
+            <lightning-button class="slds-p-around_x-small" variant="brand" label='Clear' onclick={clearData}>
+            </lightning-button>
+        </div>
+        <div>
+            <table
+                class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered slds-table_striped">
+                <tbody>
+                    <template for:each={details} for:item="param">
+                        <tr key={param.key}>
+                            <td><b>{param.key}</b></td>
+                            <td>{param.value}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>
