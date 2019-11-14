@@ -36,6 +36,7 @@ global class PSVinLookupDetails {
             request.setEndpoint('callout:NHTSA_Vin_Decode/api/vehicles/decodevin/' + vin  + '?format=json');
              //request.setEndpoint('https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/' + vin  + '?format=json');
             request.setMethod('GET');
+            request.setTimeout(120000);
             HttpResponse response = http.send(request);
 
             /////////////////.///////////
